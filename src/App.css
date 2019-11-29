@@ -1,22 +1,131 @@
-.App {
-  text-align: center;
+.sudokuApp {
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.title {
+    margin: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button {
+    margin: 20px 0 0 10px;
+    padding: 7px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
 }
 
-.App-link {
-  color: #09d3ac;
+.buttonUndo, .buttonClear {
+    border-radius: 100px;
 }
+
+.icon {
+    margin-right: 5px;
+}
+
+.iconRotate {
+    transform: rotate(-45deg);
+}
+
+.buttonUndo {
+    background-color: #FBC02D;
+}
+
+.buttonClear {
+    background-color: #D32F2F;
+}
+
+.buttonCheck, .buttonSolve {
+    color: #fff;
+}
+
+.buttonCheck {
+    background-color: #03A9F4;
+}
+
+.buttonSolve {
+    background-color: #4CAF50;
+}
+
+.tableBlock {
+    margin: 15px 0 15px 50%;
+    transform: translate(-23%, 0);
+}
+
+.cell {
+    width: inherit;
+    display: block;
+    height: inherit;
+    text-align: center;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+
+.trueVal {
+    color: darkblue;
+}
+
+input:disabled {
+    background-color: #fff;
+    color: darkblue;
+    font-weight: bold;
+}
+
+.disabled {
+    background-color: gray;
+}
+
+.titleBlock {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.helpBlock {
+    align-self: center;
+    margin-left: 10px;
+    position: relative;
+}
+
+.helpImg {
+    padding: 10px;
+}
+
+.help {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    background-color: beige;
+    padding: 10px 25px;
+    width: 545px;
+    border: 2px solid;
+    border-radius: 30px;
+    left: 45px;
+    top: -525px;
+    transition: all 0.5s linear;
+}
+
+.helpTitle {
+    letter-spacing: 5px;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+    display: block;
+    width: auto;
+}
+
+.rules {
+    text-align: left;
+}
+
+.ruleButton {
+    font-weight: 800;
+}
+
+.helpImg:hover + .help {
+    display: block;
+    top: 35px;
+    transition: all 0.5s linear;
+}
+
+

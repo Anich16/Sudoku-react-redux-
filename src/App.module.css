@@ -1,0 +1,54 @@
+.App {
+  text-align: center;
+}
+
+.titleBlock {
+  text-align: center;
+}
+.title {
+  font-weight: 800;
+  color: darkorange;
+  font-size: 60px;
+  line-height: 60px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 3px #000;
+  border-bottom: 3px solid #000;
+  width: auto;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin: 10px auto;
+}
+
+.sudokuBlock {
+  display: inline-block;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+.row:nth-child(3n){
+  border-bottom: 2px solid #000;
+}
+
+.row:first-child {
+  border-top: 2px solid #000;
+}
+
+.cell {
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  font-weight: 600;
+  border: 1px solid #000;
+}
+
+.cell:nth-child(3n){
+  border-right: 2px solid #000;
+}
+
+.cell:first-child {
+  border-left: 2px solid #000;
+}
