@@ -2,13 +2,12 @@ import {connect} from "react-redux";
 import App from "../App";
 import {
 	changeValueAC,
-	checkAC,
+	checkAC, checkErrorAC,
 	clearAC,
 	closeModalWindowAC,
 	continueGameAC,
 	solveAC,
-	undoAC,
-	victoryAC
+	undoAC
 } from "./SudokuReducer";
 
 let mapStateToProps = (state) => {
@@ -18,9 +17,10 @@ let mapStateToProps = (state) => {
 		correctSudoku: state.correctSudoku,
 		isVictory: state.isVictory,
 		isChecked: state.isChecked,
-		isModalWindow: state.isModalWindow
+		isModalWindow: state.isModalWindow,
+		isError: state.isError,
+		errorMessage: state.errorMessage
 	}
-
 };
 
 let mapDispatchToProps = (dispatch) => {
@@ -45,6 +45,9 @@ let mapDispatchToProps = (dispatch) => {
 		},
 		closeModalWindow: () => {
 			return dispatch(closeModalWindowAC())
+		},
+		checkError: (row, col, value) => {
+			return dispatch(checkErrorAC(row, col, value))
 		}
 	}
 };
